@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valeris Education</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8f9fb;
+color:#333;
+line-height:1.6;
+}
+
+:root{
+--blue:#0f2b5b;
+--gold:#d4af37;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:24px;
+font-weight:600;
+color:var(--blue);
+}
+
+.logo span{
+color:var(--gold);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
+
+nav a:hover{
+color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,var(--blue),#1b4ea1);
+color:white;
+padding:40px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.hero button{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+background:var(--gold);
+color:#222;
+font-weight:600;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+.hero button:hover{
+opacity:0.9;
+}
+
+/* SECTION */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:32px;
+color:var(--blue);
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+text-align:center;
+}
+
+.card h3{
+color:var(--blue);
+margin-bottom:10px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+background:var(--blue);
+color:white;
+text-align:center;
+}
+
+.contact h2{
+color:white;
+margin-bottom:20px;
+}
+
+.contact p{
+opacity:0.9;
+}
+
+.contact button{
+margin-top:20px;
+padding:12px 26px;
+border:none;
+background:var(--gold);
+font-weight:600;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#0b1f42;
+color:white;
+text-align:center;
+padding:25px;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Valeris<span>Edu</span></div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<section class="hero">
+
+<div>
+<h1>Empowering Future Through Education</h1>
+
+<p>
+Valeris Education provides modern learning experiences designed to
+prepare students for global opportunities.
+</p>
+
+<button>Learn More</button>
+
+</div>
+
+</section>
+
+
+<section id="services">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Academic Coaching</h3>
+<p>
+High quality guidance to help students achieve academic excellence.
+</p>
+</div>
+
+<div class="card">
+<h3>Career Guidance</h3>
+<p>
+Helping students choose the right career path with expert mentoring.
+</p>
+</div>
+
+<div class="card">
+<h3>Skill Development</h3>
+<p>
+Programs designed to build modern skills required in the industry.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="about">
+
+<div>
+<h2 style="color:var(--blue);margin-bottom:20px;">About Valeris Education</h2>
+
+<p>
+Valeris Education is committed to transforming learning through innovation,
+quality mentorship and global perspective. Our goal is to provide students
+with the knowledge, skills and confidence to succeed in today's competitive
+world.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2>Get In Touch</h2>
+
+<p>
+Have questions or want to work with us?
+</p>
+
+<button>Contact Us</button>
+
+</section>
+
+
+<footer>
+
+© 2026 Valeris Education • All Rights Reserved
+
+</footer>
+
+</body>
+</html>
