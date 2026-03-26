@@ -91,55 +91,29 @@
 
           <div class="contact-form-card reveal delay-1">
             <div class="form-badge">Waiting for your homepage approval</div>
-            <form class="form-layout" action="#" method="post">
-              <div class="field-group two-col">
-                <div class="field">
-                  <label for="student-name">Student Name</label>
-                  <input type="text" id="student-name" name="student-name" placeholder="Student full name" />
-                </div>
-                <div class="field">
-                  <label for="student-phone">Phone Number</label>
-                  <input type="tel" id="student-phone" name="student-phone" placeholder="Phone number" />
-                </div>
-              </div>
-              <div class="field-group two-col">
-                <div class="field">
-                  <label for="student-email">Email Address</label>
-                  <input type="email" id="student-email" name="student-email" placeholder="Email address" />
-                </div>
-                <div class="field">
-                  <label for="destination">Preferred Destination</label>
-                  <select id="destination" name="destination">
-                    <option value="">Select destination</option>
-                    <option>United Kingdom</option>
-                    <option>Canada</option>
-                    <option>Australia</option>
-                    <option>Europe</option>
-                    <option>Open to suggestions</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field-group two-col">
-                <div class="field">
-                  <label for="intake">Preferred Intake</label>
-                  <input type="text" id="intake" name="intake" placeholder="Example: Fall 2026" />
-                </div>
-                <div class="field">
-                  <label for="mode">Consultation Mode</label>
-                  <select id="mode" name="mode">
-                    <option value="">Select mode</option>
-                    <option>Phone Call</option>
-                    <option>Video Call</option>
-                    <option>In Person</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field">
-                <label for="student-message">Additional Details</label>
-                <textarea id="student-message" name="student-message" rows="5" placeholder="Share course interest, academic level, or anything important"></textarea>
-              </div>
-              <button type="button" class="btn btn-primary btn-disabled">Submission setup will be added in the next phase</button>
-            </form>
+            <form action="https://formspree.io/f/mykbzzed" method="POST" class="contact-form">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+    
+    <input type="email" name="email" placeholder="Email Address" required>
+    
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <select name="country" required>
+        <option value="">Preferred Country</option>
+        <option>UK</option>
+        <option>USA</option>
+        <option>Canada</option>
+        <option>Australia</option>
+        <option>Europe</option>
+    </select>
+
+    <input type="date" name="date" required>
+
+    <textarea name="message" placeholder="Tell us about your plan" rows="5"></textarea>
+
+    <button type="submit">Book Consultation</button>
+</form>
           </div>
         </div>
       </section>
