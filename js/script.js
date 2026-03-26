@@ -1,8 +1,14 @@
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function(e) {
+// Smooth scroll animation
+
+document.querySelectorAll("a").forEach(link => {
+link.addEventListener("click", function(e){
+if(this.hash !== ""){
 e.preventDefault();
-document.querySelector(this.getAttribute('href')).scrollIntoView({
-behavior: 'smooth'
+const hash = this.hash;
+
+document.querySelector(hash).scrollIntoView({
+behavior:"smooth"
 });
+}
 });
 });

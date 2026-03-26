@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consultation</title>
+<title>Book Consultation</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<h1>Book Consultation</h1>
 
-<!-- Option 1: Formspree -->
-<form action="https://formspree.io/f/yourformid" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="date" name="date" required>
-<textarea name="details" placeholder="Details"></textarea>
-<button type="submit">Book</button>
+<section class="about">
+<h2>Book a Consultation</h2>
+
+<form action="https://formspree.io/f/yourformid" method="POST" style="max-width:400px;margin:auto;">
+<input type="text" name="name" placeholder="Full Name" required style="width:100%;padding:12px;margin:10px 0;">
+<input type="email" name="email" placeholder="Email" required style="width:100%;padding:12px;margin:10px 0;">
+<input type="date" name="date" required style="width:100%;padding:12px;margin:10px 0;">
+<textarea name="details" placeholder="Details" style="width:100%;padding:12px;margin:10px 0;"></textarea>
+<button class="btn-primary" type="submit">Book Now</button>
 </form>
 
-<!-- Option 2: Google Form embed -->
-<!-- Replace with your Google Form iframe -->
-<!-- <iframe src="YOUR_GOOGLE_FORM_LINK" width="100%" height="600"></iframe> -->
+</section>
 
 </body>
 </html>
