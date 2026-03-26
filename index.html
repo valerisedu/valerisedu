@@ -263,38 +263,17 @@
 
           <div class="contact-form-card reveal delay-1">
             <div class="form-badge">Phase 2 form setup ready</div>
-            <form class="form-layout" action="#" method="post">
-              <div class="field-group two-col">
-                <div class="field">
-                  <label for="name">Full Name</label>
-                  <input type="text" id="name" name="name" placeholder="Your full name" />
-                </div>
-                <div class="field">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Your contact number" />
-                </div>
-              </div>
-              <div class="field-group two-col">
-                <div class="field">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="Your email address" />
-                </div>
-                <div class="field">
-                  <label for="interest">Interested In</label>
-                  <select id="interest" name="interest">
-                    <option value="">Select an option</option>
-                    <option>Study Abroad Guidance</option>
-                    <option>University Shortlisting</option>
-                    <option>Visa Assistance</option>
-                    <option>General Enquiry</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us a little about your enquiry"></textarea>
-              </div>
-              <button type="button" class="btn btn-primary btn-disabled">Form connection will be added after homepage approval</button>
+            <form action="https://formspree.io/f/xayzabcd" method="POST" class="contact-form">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    
+    <input type="email" name="email" placeholder="Your Email" required>
+    
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <button type="submit">Send Enquiry</button>
             </form>
           </div>
         </div>
