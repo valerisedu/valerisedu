@@ -1,124 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ValerisEdu | Guiding You Every Step Abroad</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ValerisEdu | Guiding You Every Step Abroad</title>
+  <meta name="description" content="ValerisEdu helps students plan, apply, and move abroad with expert education counseling, admissions support, and visa guidance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <div class="site-shell">
+    <header class="header" id="top">
+      <div class="container navbar">
+        <a href="#home" class="brand" aria-label="ValerisEdu Home">
+          <img src="images/logo-text.png" alt="ValerisEdu logo" class="brand-logo-text" />
+        </a>
 
-<header>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<div class="navbar">
+        <nav class="nav" id="mainNav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#universities">Universities</a>
+          <a href="#contact">Contact</a>
+          <a href="consultation.html" class="nav-cta">Book Consultation</a>
+        </nav>
+      </div>
+    </header>
 
-<div class="logo">
-<img class="logo-text" src="images/logo-text.png">
-</div>
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Trusted international education guidance</div>
+            <h1>Guiding ambitious students <span>every step abroad</span>.</h1>
+            <p>
+              From university shortlisting to applications, visas, and pre-departure support,
+              ValerisEdu helps students move forward with clarity, confidence, and the right strategy.
+            </p>
+            <div class="hero-actions">
+              <a href="consultation.html" class="btn btn-primary">Book Consultation</a>
+              <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Services</a>
-<a href="#">Universities</a>
-<a href="#">Contact</a>
-</nav>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <strong>1:1</strong>
+                <span>Personalized guidance</span>
+              </div>
+              <div class="stat-card">
+                <strong>End-to-End</strong>
+                <span>Admissions to visa support</span>
+              </div>
+              <div class="stat-card">
+                <strong>Global</strong>
+                <span>Top study destinations</span>
+              </div>
+            </div>
+          </div>
 
-</div>
+          <div class="hero-visual reveal delay-1">
+            <div class="hero-card hero-card-main floating-card">
+              <img src="images/logo-cover.png" alt="ValerisEdu brand mark" />
+            </div>
+            <div class="hero-card hero-card-small">
+              <span>Study Abroad</span>
+              <strong>Admissions + Visa + Guidance</strong>
+            </div>
+            <div class="hero-orbit"></div>
+          </div>
+        </div>
+      </section>
 
-</header>
+      <section class="section about-section" id="about">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-tag">About ValerisEdu</span>
+            <h2>A professional partner for your international education journey</h2>
+            <p>
+              We help students make informed choices, avoid confusion, and move through the full study-abroad process with structured support and practical guidance.
+            </p>
+          </div>
 
+          <div class="about-grid">
+            <div class="about-panel glass reveal">
+              <h3>What makes us different</h3>
+              <p>
+                We combine strategy, personal attention, and process clarity so students and parents feel supported from the first conversation to final departure.
+              </p>
+              <ul class="check-list">
+                <li>Clear guidance tailored to profile, budget, and goals</li>
+                <li>Professional support across admissions and documentation</li>
+                <li>Consistent communication at every stage</li>
+                <li>Practical preparation for studying and settling abroad</li>
+              </ul>
+            </div>
 
-<section class="hero">
+            <div class="feature-stack reveal delay-1">
+              <article class="feature-card">
+                <div class="feature-icon">01</div>
+                <h3>Student-First Guidance</h3>
+                <p>Every recommendation is shaped around the student’s long-term academic and career direction.</p>
+              </article>
+              <article class="feature-card">
+                <div class="feature-icon">02</div>
+                <h3>Application Expertise</h3>
+                <p>We simplify applications, documentation, timelines, and decision-making across the process.</p>
+              </article>
+              <article class="feature-card">
+                <div class="feature-icon">03</div>
+                <h3>Confident Planning</h3>
+                <p>Students move ahead with less uncertainty and more clarity about what comes next.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="hero-left">
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <span class="section-tag">Our Services</span>
+            <h2>Everything you need, organized in one place</h2>
+            <p>Designed to support students from early planning to final departure.</p>
+          </div>
 
-<h1>Guiding You <span>Every Step Abroad</span></h1>
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <h3>Career & Course Counseling</h3>
+              <p>Understand the right path based on academic background, strengths, interest, and future goals.</p>
+            </article>
+            <article class="service-card reveal delay-1">
+              <h3>University Shortlisting</h3>
+              <p>Select institutions that align with budget, destination preference, eligibility, and career outcomes.</p>
+            </article>
+            <article class="service-card reveal delay-2">
+              <h3>Application Assistance</h3>
+              <p>Complete support for forms, statements, documentation, and submission planning.</p>
+            </article>
+            <article class="service-card reveal">
+              <h3>Visa Guidance</h3>
+              <p>Step-by-step help with financial documents, interview preparation, and visa application workflows.</p>
+            </article>
+            <article class="service-card reveal delay-1">
+              <h3>Scholarship Support</h3>
+              <p>Guidance for relevant opportunities that can improve affordability and planning confidence.</p>
+            </article>
+            <article class="service-card reveal delay-2">
+              <h3>Pre-Departure Support</h3>
+              <p>Practical help with planning, checklists, travel readiness, and settling into a new academic environment.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-<p>
-ValerisEdu helps students achieve their international education dreams with
-expert guidance, global university partnerships, and a personalized approach.
-</p>
+      <section class="section process-section" id="process">
+        <div class="container process-grid">
+          <div class="section-head reveal">
+            <span class="section-tag">How it works</span>
+            <h2>A smooth process built around clarity</h2>
+            <p>Each step is structured so students know where they are, what is needed, and what comes next.</p>
+          </div>
 
-<div class="hero-buttons">
-<button class="btn-primary">Start Your Journey</button>
-<button class="btn-secondary">Book Consultation</button>
-</div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-step">Step 1</span>
+              <h3>Initial discussion</h3>
+              <p>We understand the student profile, study goals, preferred countries, and budget expectations.</p>
+            </article>
+            <article class="timeline-item reveal delay-1">
+              <span class="timeline-step">Step 2</span>
+              <h3>Planning & shortlisting</h3>
+              <p>We map out suitable course and university options with a practical strategy.</p>
+            </article>
+            <article class="timeline-item reveal delay-2">
+              <span class="timeline-step">Step 3</span>
+              <h3>Applications & offers</h3>
+              <p>We guide submissions, documentation, and follow-up until offers are received.</p>
+            </article>
+            <article class="timeline-item reveal">
+              <span class="timeline-step">Step 4</span>
+              <h3>Visa & departure</h3>
+              <p>From visa preparation to travel readiness, we help students move ahead with confidence.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-</div>
+      <section class="section destinations-section" id="universities">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <span class="section-tag">Destinations & universities</span>
+            <h2>Explore leading study destinations</h2>
+            <p>We support students interested in globally recognized academic pathways.</p>
+          </div>
 
+          <div class="destination-grid">
+            <div class="destination-card reveal"><h3>United Kingdom</h3><p>Strong academic reputation, diverse programs, and excellent global exposure.</p></div>
+            <div class="destination-card reveal delay-1"><h3>Canada</h3><p>Student-friendly environment with quality education and practical career opportunities.</p></div>
+            <div class="destination-card reveal delay-2"><h3>Australia</h3><p>Popular for academic flexibility, lifestyle, and internationally valued qualifications.</p></div>
+            <div class="destination-card reveal"><h3>Europe</h3><p>Wide range of universities, specialized programs, and multicultural learning environments.</p></div>
+          </div>
+        </div>
+      </section>
 
-<div class="hero-right">
-<img src="images/logo-cover.png">
-</div>
+      <section class="section testimonials-section">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <span class="section-tag">Confidence at every stage</span>
+            <h2>Built to feel professional, clear, and trustworthy</h2>
+          </div>
 
-</section>
+          <div class="testimonial-wrap">
+            <div class="testimonial-card reveal">
+              <p>“The process feels much simpler when every stage is properly explained and managed.”</p>
+              <span>Structured student support</span>
+            </div>
+            <div class="testimonial-card reveal delay-1">
+              <p>“A professional study-abroad website should feel clear, premium, and easy to navigate. That is exactly the direction here.”</p>
+              <span>Modern web experience</span>
+            </div>
+            <div class="testimonial-card reveal delay-2">
+              <p>“From scrolling sections to the consultation page, the experience is designed to feel complete and polished.”</p>
+              <span>Ready for expansion</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <span class="section-tag">Contact</span>
+            <h2>Start the conversation</h2>
+            <p>
+              This section is already positioned at the bottom of the home page so the top menu can smoothly scroll here.
+              The enquiry form design is ready and will be connected in the final forms phase.
+            </p>
+            <div class="contact-points">
+              <div>
+                <strong>Email</strong>
+                <span>hello@valerisedu.com</span>
+              </div>
+              <div>
+                <strong>Support</strong>
+                <span>Admissions, counseling, visas, and general enquiries</span>
+              </div>
+              <div>
+                <strong>Consultation page</strong>
+                <span><a href="consultation.html">Open booking page</a></span>
+              </div>
+            </div>
+          </div>
 
-<section class="about">
+          <div class="contact-form-card reveal delay-1">
+            <div class="form-badge">Phase 2 form setup ready</div>
+            <form class="form-layout" action="#" method="post">
+              <div class="field-group two-col">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your full name" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Your contact number" />
+                </div>
+              </div>
+              <div class="field-group two-col">
+                <div class="field">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Your email address" />
+                </div>
+                <div class="field">
+                  <label for="interest">Interested In</label>
+                  <select id="interest" name="interest">
+                    <option value="">Select an option</option>
+                    <option>Study Abroad Guidance</option>
+                    <option>University Shortlisting</option>
+                    <option>Visa Assistance</option>
+                    <option>General Enquiry</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us a little about your enquiry"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary btn-disabled">Form connection will be added after homepage approval</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<h2>Why Choose ValerisEdu</h2>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="images/logo-icon.png" alt="ValerisEdu icon" class="footer-logo" />
+          <p class="footer-copy">ValerisEdu © 2026. Guiding students with clarity, care, and confidence.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+          <a href="consultation.html">Book Consultation</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-<div class="features">
-
-<div class="card">
-<h3>Global Universities</h3>
-<p>Access to top institutions across the world with trusted partnerships.</p>
-</div>
-
-<div class="card">
-<h3>Expert Guidance</h3>
-<p>Professional counselors guiding you through every step of your journey.</p>
-</div>
-
-<div class="card">
-<h3>Visa Assistance</h3>
-<p>Complete visa and documentation support for stress-free applications.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="cta">
-
-<h2>Your Global Future Starts Here</h2>
-
-<p>Let ValerisEdu help you unlock opportunities across the world.</p>
-
-<button class="btn-primary">Apply Now</button>
-
-</section>
-
-
-<footer>
-
-<div class="footer-container">
-
-<div class="footer-logo">
-<img src="images/logo-icon.png">
-<p>ValerisEdu © 2026</p>
-</div>
-
-<div class="footer-links">
-<a href="#">Privacy</a>
-<a href="#">Terms</a>
-<a href="#">Contact</a>
-</div>
-
-</div>
-
-</footer>
-
-
-<script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
