@@ -1,0 +1,48 @@
+body {
+margin:0;
+font-family:Arial;
+overflow-x:hidden;
+}
+
+.navbar {
+position:fixed;
+top:0;
+width:100%;
+background:#222;
+color:#fff;
+display:flex;
+justify-content:space-between;
+padding:15px;
+z-index:1000;
+}
+
+nav a {
+color:#fff;
+margin:0 10px;
+text-decoration:none;
+}
+
+.section {
+height:100vh;
+padding-top:80px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+form {
+display:flex;
+flex-direction:column;
+width:300px;
+}
+
+input, textarea {
+margin:10px 0;
+padding:10px;
+}
+
+button {
+padding:10px;
+cursor:pointer;
+}
