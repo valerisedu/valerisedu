@@ -777,3 +777,52 @@ textarea {
     padding: 22px;
   }
 }
+.contact-form {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: #0f4c81;
+  box-shadow: 0 0 0 4px rgba(15, 76, 129, 0.08);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #0f4c81;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
