@@ -91,28 +91,31 @@
 
           <div class="contact-form-card reveal delay-1">
             <div class="form-badge">Waiting for your homepage approval</div>
-            <form action="https://formspree.io/f/mykbzzed" method="POST" class="contact-form">
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-    <input type="text" name="name" placeholder="Full Name" required>
-    
-    <input type="email" name="email" placeholder="Email Address" required>
-    
-    <input type="tel" name="phone" placeholder="Phone Number" required>
+  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+  <input type="hidden" name="subject" value="New Consultation Booking - ValerisEdu">
+  <input type="hidden" name="from_name" value="ValerisEdu Website">
+  <input type="hidden" name="replyto" value="email">
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-    <select name="country" required>
-        <option value="">Preferred Country</option>
-        <option>UK</option>
-        <option>USA</option>
-        <option>Canada</option>
-        <option>Australia</option>
-        <option>Europe</option>
-    </select>
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
 
-    <input type="date" name="date" required>
+  <select name="country" required>
+    <option value="">Preferred Country</option>
+    <option>UK</option>
+    <option>USA</option>
+    <option>Canada</option>
+    <option>Australia</option>
+    <option>Europe</option>
+  </select>
 
-    <textarea name="message" placeholder="Tell us about your plan" rows="5"></textarea>
+  <input type="date" name="preferred_date" required>
+  <textarea name="message" placeholder="Tell us about your study plans" rows="5"></textarea>
 
-    <button type="submit">Book Consultation</button>
+  <button type="submit">Book Consultation</button>
 </form>
           </div>
         </div>
