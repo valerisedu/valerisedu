@@ -263,18 +263,21 @@
 
           <div class="contact-form-card reveal delay-1">
             <div class="form-badge">Phase 2 form setup ready</div>
-            <form action="https://formspree.io/f/mykbzzed" method="POST" class="contact-form">
-    
-    <input type="text" name="name" placeholder="Your Name" required>
-    
-    <input type="email" name="email" placeholder="Your Email" required>
-    
-    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
+  <input type="hidden" name="subject" value="New Website Enquiry - ValerisEdu">
+  <input type="hidden" name="from_name" value="ValerisEdu Website">
+  <input type="hidden" name="replyto" value="email">
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-    <button type="submit">Send Enquiry</button>
-            </form>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="tel" name="phone" placeholder="Your Phone Number" required>
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+  <button type="submit">Send Enquiry</button>
+      </form>
           </div>
         </div>
       </section>
