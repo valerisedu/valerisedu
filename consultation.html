@@ -1,106 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Consultation | ValerisEdu</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Consultation | ValerisEdu</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">ValerisEdu</a>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/logo-icon.png" alt="ValerisEdu Logo Icon">
+        <img src="images/logo-text.png" alt="ValerisEdu" class="logo-text">
+      </a>
 
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#process">Process</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- HERO -->
+  <main>
     <section class="consult-hero">
-        <div class="container">
-            <h1>Book Your Consultation</h1>
-            <p>Start your study abroad journey with clarity and expert guidance.</p>
-        </div>
+      <div class="container">
+        <h1>Book Your Consultation</h1>
+        <p>
+          Take the first step towards your international education journey with
+          expert guidance tailored to your academic goals, country preferences,
+          and future plans.
+        </p>
+      </div>
     </section>
 
-    <!-- FORM SECTION -->
     <section class="consult-form-section">
-        <div class="container form-container">
+      <div class="form-container">
+        <div class="form-info">
+          <h2>Begin with the Right Guidance</h2>
+          <p>
+            Share your details with us and our team will connect with you to
+            understand your profile, recommend the right path, and guide you
+            through the next steps with clarity and confidence.
+          </p>
 
-            <div class="form-info">
-                <h2>Let’s Plan Your Next Step</h2>
-                <p>
-                    Tell us about your goals and preferences. Our team will review your details
-                    and get in touch with the right guidance tailored to your profile.
-                </p>
-
-                <ul>
-                    <li>✔ Personalized university selection</li>
-                    <li>✔ Application & documentation support</li>
-                    <li>✔ Visa guidance & preparation</li>
-                    <li>✔ End-to-end admission assistance</li>
-                </ul>
-            </div>
-
-            <div class="form-box">
-
-                <!-- FORM START -->
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-
-                    <!-- IMPORTANT -->
-                    <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
-
-                    <input type="hidden" name="subject" value="New Consultation Booking - ValerisEdu">
-                    <input type="hidden" name="from_name" value="ValerisEdu Website">
-                    <input type="hidden" name="replyto" value="email">
-                    <input type="hidden" name="redirect" value="https://valerisedu.com/thankyou.html">
-
-                    <input type="checkbox" name="botcheck" style="display:none;">
-
-                    <input type="text" name="Student Name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <input type="tel" name="Phone Number" placeholder="Phone Number" required>
-
-                    <select name="Preferred Country" required>
-                        <option value="">Preferred Country</option>
-                        <option>UK</option>
-                        <option>USA</option>
-                        <option>Canada</option>
-                        <option>Australia</option>
-                        <option>Europe</option>
-                    </select>
-
-                    <input type="date" name="Preferred Date" required>
-
-                    <textarea name="Study Plan Details" placeholder="Tell us about your study plans"></textarea>
-
-                    <button type="submit">Book Consultation</button>
-
-                </form>
-                <!-- FORM END -->
-
-            </div>
-
+          <ul>
+            <li>Personalized guidance based on your profile</li>
+            <li>University and course shortlisting support</li>
+            <li>Application, SOP and documentation assistance</li>
+            <li>Visa guidance and end-to-end admission support</li>
+          </ul>
         </div>
+
+        <div class="form-box">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            
+            <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
+            <input type="hidden" name="subject" value="New Consultation Booking - ValerisEdu">
+            <input type="hidden" name="from_name" value="ValerisEdu Website">
+            <input type="hidden" name="replyto" value="email">
+            <input type="hidden" name="redirect" value="https://valerisedu.com/thankyou.html">
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <input type="text" name="Student Name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+
+            <select name="Preferred Country" required>
+              <option value="">Preferred Country</option>
+              <option>UK</option>
+              <option>USA</option>
+              <option>Canada</option>
+              <option>Australia</option>
+              <option>Europe</option>
+            </select>
+
+            <input type="date" name="Preferred Date" required>
+
+            <textarea name="Study Plan Details" placeholder="Tell us about your study plans, preferred intake, course interest, or any questions you have"></textarea>
+
+            <button type="submit">Book Consultation</button>
+          </form>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 ValerisEdu. All rights reserved.</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo-icon.png" alt="ValerisEdu Logo">
+        <p>Guiding students towards global education opportunities.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
