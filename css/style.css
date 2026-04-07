@@ -108,7 +108,7 @@ body.menu-open{
 .eyebrow{
   display:inline-flex;
   align-items:center;
-  gap:8px;
+  gap:10px;
   font-size:0.84rem;
   font-weight:600;
   letter-spacing:0.08em;
@@ -118,11 +118,16 @@ body.menu-open{
 }
 
 .section-tag::before,
+.section-tag::after,
 .eyebrow::before{
   content:"";
   width:28px;
   height:1px;
   background:var(--accent);
+}
+
+.section-tag::after{
+  content:"";
 }
 
 .section-tag-light{
@@ -943,5 +948,157 @@ footer{
 
   .map-box iframe{
     height:240px;
+  }
+}
+
+
+/* === Final refinement updates === */
+.logo{
+  gap:0;
+}
+
+.logo img:first-child{
+  display:none;
+}
+
+.logo-text{
+  height:44px;
+}
+
+.site-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:0 2px;
+  z-index:1;
+}
+
+.site-nav a::before{
+  content:"";
+  position:absolute;
+  left:-10px;
+  right:-10px;
+  top:50%;
+  height:34px;
+  transform:translateY(-50%);
+  background:linear-gradient(180deg, rgba(31,53,86,0.08), rgba(31,53,86,0.03));
+  border-radius:999px;
+  box-shadow:0 8px 18px rgba(15,31,54,0.06);
+  opacity:0;
+  transition:opacity 0.28s ease;
+  z-index:-1;
+}
+
+.site-nav a.active::before,
+.site-nav a:hover::before{
+  opacity:1;
+}
+
+.nav-cta{
+  padding:0 24px;
+  min-width:170px;
+  text-align:center;
+}
+
+.nav-cta::before{
+  display:none;
+}
+
+.hero{
+  padding:84px 0 92px;
+}
+
+.hero .container{
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:22px;
+  border:6px solid rgba(31,53,86,0.22);
+  border-radius:34px;
+  pointer-events:none;
+}
+
+.hero-visual-card{
+  animation:heroFloat 5.6s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+  0%,100%{transform:translateY(0px);}
+  50%{transform:translateY(-12px);}
+}
+
+.section-heading,
+.consult-hero .container,
+.form-info,
+.cta-card{
+  text-align:center;
+}
+
+.section-heading .section-tag,
+.consult-hero .section-tag,
+.form-info .section-tag,
+.cta-card .section-tag{
+  justify-content:center;
+}
+
+.form-info ul{
+  text-align:left;
+}
+
+.form-info .location-note{
+  text-align:center;
+}
+
+.cta-card{
+  justify-content:center;
+  text-align:center;
+  flex-direction:column;
+}
+
+.cta-button,
+.cta-card .btn-primary{
+  align-self:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.timeline{
+  max-width:980px;
+}
+
+.footer-logo img{
+  display:none;
+}
+
+@media (max-width: 900px){
+  .logo-text{
+    height:38px;
+  }
+
+  .hero::after{
+    inset:14px;
+    border-width:4px;
+    border-radius:26px;
+  }
+}
+
+@media (max-width: 640px){
+  .logo-text{
+    height:34px;
+  }
+
+  .site-nav a::before{
+    left:-6px;
+    right:-6px;
+  }
+
+  .hero::after{
+    inset:10px;
+    border-width:3px;
+    border-radius:20px;
   }
 }
