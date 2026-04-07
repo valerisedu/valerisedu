@@ -728,6 +728,41 @@ body.menu-open{
   filter:grayscale(10%) contrast(1.05);
 }
 
+.go-top-btn{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  width:54px;
+  height:54px;
+  border:none;
+  border-radius:0;
+  background:var(--accent);
+  color:var(--white);
+  font-size:1.5rem;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 18px 34px rgba(213,160,55,0.30);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(16px);
+  transition:opacity 0.28s ease, visibility 0.28s ease, transform 0.28s ease, background 0.28s ease;
+  z-index:999;
+}
+
+.go-top-btn:hover{
+  background:var(--accent-dark);
+  transform:translateY(0);
+}
+
+.go-top-btn.is-visible{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
 footer{
   background:var(--primary-dark);
   color:var(--white);
@@ -913,6 +948,14 @@ footer{
     padding:74px 0;
   }
 
+    .go-top-btn{
+    right:16px;
+    bottom:16px;
+    width:48px;
+    height:48px;
+    font-size:1.25rem;
+  }
+  
   .cta-card,
   .card,
   .service-card,
@@ -970,23 +1013,22 @@ footer{
   align-items:center;
   justify-content:center;
   min-height:42px;
-  padding:0 2px;
+  padding:0 12px;
   z-index:1;
 }
 
 .site-nav a::before{
   content:"";
   position:absolute;
-  left:-10px;
-  right:-10px;
-  top:50%;
-  height:34px;
-  transform:translateY(-50%);
-  background:linear-gradient(180deg, rgba(31,53,86,0.08), rgba(31,53,86,0.03));
-  border-radius:999px;
-  box-shadow:0 8px 18px rgba(15,31,54,0.06);
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background:linear-gradient(180deg, rgba(31,53,86,0.10), rgba(31,53,86,0.05));
+  border-radius:0;
+  box-shadow:none;
   opacity:0;
-  transition:opacity 0.28s ease;
+  transition:opacity 0.28s ease, background 0.28s ease;
   z-index:-1;
 }
 
@@ -1016,9 +1058,9 @@ footer{
 .hero::after{
   content:"";
   position:absolute;
-  inset:22px;
-  border:6px solid rgba(31,53,86,0.22);
-  border-radius:34px;
+  inset:0;
+  border:10px solid var(--primary);
+  border-radius:0;
   pointer-events:none;
 }
 
