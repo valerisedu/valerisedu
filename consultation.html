@@ -4,54 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Consultation | ValerisEdu</title>
-
+  <meta name="description" content="Book a consultation with ValerisEdu for expert guidance on study abroad admissions, documentation, and visa support." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <header>
-    <div class="navbar">
-      <a href="index.html" class="logo">
+  <header class="site-header">
+    <div class="navbar container">
+      <a href="index.html" class="logo" aria-label="ValerisEdu home">
         <img src="images/logo-icon.png" alt="ValerisEdu Logo Icon">
         <img src="images/logo-text.png" alt="ValerisEdu" class="logo-text">
       </a>
 
-      <nav>
-        <a href="index.html">Home</a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html#home">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#process">Process</a>
         <a href="index.html#contact">Contact</a>
+        <a href="consultation.html" class="nav-cta">Book Consultation</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="consult-hero">
-      <div class="container">
+      <div class="container reveal">
+        <span class="section-tag section-tag-light">Consultation</span>
         <h1>Book Your Consultation</h1>
         <p>
-          Take the first step towards your international education journey with
-          expert guidance tailored to your academic goals, country preferences,
-          and future plans.
+          Take the first step towards your international education journey with expert guidance tailored to your academic goals, country preferences, and future plans.
         </p>
       </div>
     </section>
 
     <section class="consult-form-section">
-      <div class="form-container">
-        <div class="form-info">
+      <div class="container form-container">
+        <div class="form-info reveal">
           <h2>Begin with the Right Guidance</h2>
           <p>
-            Share your details with us and our team will connect with you to
-            understand your profile, recommend the right path, and guide you
-            through the next steps with clarity and confidence.
+            Share your details with us and our team will connect with you to understand your profile, recommend the right path, and guide you through the next steps with clarity and confidence.
           </p>
-
           <ul>
             <li>Personalized guidance based on your profile</li>
             <li>University and course shortlisting support</li>
@@ -60,9 +61,8 @@
           </ul>
         </div>
 
-        <div class="form-box">
+        <div class="form-box reveal">
           <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-            
             <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
             <input type="hidden" name="subject" value="New Consultation Booking - ValerisEdu">
             <input type="hidden" name="from_name" value="ValerisEdu Website">
@@ -84,9 +84,7 @@
             </select>
 
             <input type="date" name="Preferred Date" required>
-
             <textarea name="Study Plan Details" placeholder="Tell us about your study plans, preferred intake, course interest, or any questions you have"></textarea>
-
             <button type="submit">Book Consultation</button>
           </form>
         </div>
@@ -95,14 +93,14 @@
   </main>
 
   <footer>
-    <div class="footer-container">
+    <div class="footer-container container">
       <div class="footer-logo">
         <img src="images/logo-icon.png" alt="ValerisEdu Logo">
         <p>Guiding students towards global education opportunities.</p>
       </div>
 
       <div class="footer-links">
-        <a href="index.html">Home</a>
+        <a href="index.html#home">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#services">Services</a>
         <a href="index.html#contact">Contact</a>
@@ -110,5 +108,6 @@
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
