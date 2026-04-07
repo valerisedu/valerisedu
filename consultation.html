@@ -1,143 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Consultation | ValerisEdu</title>
-  <meta name="description" content="Book a consultation with ValerisEdu for study abroad planning, admissions guidance, and visa support." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation | ValerisEdu</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="site-shell subpage-shell">
-    <header class="header">
-      <div class="container navbar">
-        <a href="index.html#home" class="brand" aria-label="ValerisEdu Home">
-          <img src="images/logo-text.png" alt="ValerisEdu logo" class="brand-logo-text" />
-        </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ValerisEdu</a>
 
-        <nav class="nav" id="mainNav">
-          <a href="index.html#home">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#services">Services</a>
-          <a href="index.html#contact">Contact</a>
-          <a href="consultation.html" class="nav-cta active">Book Consultation</a>
-        </nav>
-      </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#process">Process</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-      <section class="section sub-hero consultation-hero">
-        <div class="container consultation-grid">
-          <div class="reveal">
-            <span class="section-tag">Book Consultation</span>
-            <h1>Let’s plan your study abroad journey the right way.</h1>
-            <p>
-              This dedicated page is ready for the booking flow. Once you approve the homepage, the consultation form can be connected to Google Forms, Formspree, or another submission method you prefer.
-            </p>
-            <div class="hero-actions">
-              <a href="#consultation-form" class="btn btn-primary">View Booking Form</a>
-              <a href="index.html#contact" class="btn btn-secondary">Go to Contact</a>
-            </div>
-          </div>
-
-          <div class="consultation-side reveal delay-1">
-            <div class="consultation-panel">
-              <h3>What this page can collect later</h3>
-              <ul class="check-list compact">
-                <li>Student name and contact details</li>
-                <li>Preferred destination and intake</li>
-                <li>Current academic background</li>
-                <li>Budget and program interest</li>
-                <li>Preferred consultation date or mode</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section consultation-benefits">
+    <!-- HERO -->
+    <section class="consult-hero">
         <div class="container">
-          <div class="section-head centered reveal">
-            <span class="section-tag">Before the form goes live</span>
-            <h2>The page structure is already prepared</h2>
-          </div>
-
-          <div class="service-grid">
-            <article class="service-card reveal"><h3>Professional Layout</h3><p>Built as a dedicated page instead of a popup so it feels more trusted and complete.</p></article>
-            <article class="service-card reveal delay-1"><h3>Submission Ready</h3><p>The form area is structured to be connected to Google Forms or a direct email workflow next.</p></article>
-            <article class="service-card reveal delay-2"><h3>Responsive Design</h3><p>The page stays within standard width, with no side scrolling on desktop or mobile.</p></article>
-          </div>
+            <h1>Book Your Consultation</h1>
+            <p>Start your study abroad journey with clarity and expert guidance.</p>
         </div>
-      </section>
+    </section>
 
-      <section class="section consultation-form-section" id="consultation-form">
-        <div class="container contact-grid">
-          <div class="contact-copy reveal">
-            <span class="section-tag">Consultation Form</span>
-            <h2>Booking form layout is ready</h2>
-            <p>
-              In the final setup phase, this can submit directly to a Google Form, Formspree endpoint, Netlify Forms, or a custom email workflow. Right now it is styled and placed, but intentionally not connected yet.
-            </p>
-          </div>
+    <!-- FORM SECTION -->
+    <section class="consult-form-section">
+        <div class="container form-container">
 
-          <div class="contact-form-card reveal delay-1">
-            <div class="form-badge">Waiting for your homepage approval</div>
-<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <div class="form-info">
+                <h2>Let’s Plan Your Next Step</h2>
+                <p>
+                    Tell us about your goals and preferences. Our team will review your details
+                    and get in touch with the right guidance tailored to your profile.
+                </p>
 
-  <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
-  <input type="hidden" name="subject" value="New Consultation Booking - ValerisEdu">
-  <input type="hidden" name="from_name" value="ValerisEdu Website">
-  <input type="hidden" name="replyto" value="email">
-  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                <ul>
+                    <li>✔ Personalized university selection</li>
+                    <li>✔ Application & documentation support</li>
+                    <li>✔ Visa guidance & preparation</li>
+                    <li>✔ End-to-end admission assistance</li>
+                </ul>
+            </div>
 
-  <input type="text" name="name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email Address" required>
-  <input type="tel" name="phone" placeholder="Phone Number" required>
+            <div class="form-box">
 
-  <select name="country" required>
-    <option value="">Preferred Country</option>
-    <option>UK</option>
-    <option>USA</option>
-    <option>Canada</option>
-    <option>Australia</option>
-    <option>Europe</option>
-  </select>
+                <!-- FORM START -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
 
-  <input type="date" name="preferred_date" required>
-  <input type="hidden" name="redirect" value="https://yourusername.github.io/your-repo-name/thankyou.html">
-  <textarea name="message" placeholder="Tell us about your study plans" rows="5"></textarea>
+                    <!-- IMPORTANT -->
+                    <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
 
-  <button type="submit">Book Consultation</button>
-</form>
-          </div>
+                    <input type="hidden" name="subject" value="New Consultation Booking - ValerisEdu">
+                    <input type="hidden" name="from_name" value="ValerisEdu Website">
+                    <input type="hidden" name="replyto" value="email">
+                    <input type="hidden" name="redirect" value="https://valerisedu.com/thankyou.html">
+
+                    <input type="checkbox" name="botcheck" style="display:none;">
+
+                    <input type="text" name="Student Name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+
+                    <select name="Preferred Country" required>
+                        <option value="">Preferred Country</option>
+                        <option>UK</option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                        <option>Europe</option>
+                    </select>
+
+                    <input type="date" name="Preferred Date" required>
+
+                    <textarea name="Study Plan Details" placeholder="Tell us about your study plans"></textarea>
+
+                    <button type="submit">Book Consultation</button>
+
+                </form>
+                <!-- FORM END -->
+
+            </div>
+
         </div>
-      </section>
-    </main>
+    </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <img src="images/logo-icon.png" alt="ValerisEdu icon" class="footer-logo" />
-          <p class="footer-copy">ValerisEdu consultation page is ready for final form integration.</p>
+        <div class="container">
+            <p>© 2026 ValerisEdu. All rights reserved.</p>
         </div>
-        <div class="footer-links">
-          <a href="index.html#home">Home</a>
-          <a href="index.html#services">Services</a>
-          <a href="index.html#contact">Contact</a>
-        </div>
-      </div>
     </footer>
-  </div>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
