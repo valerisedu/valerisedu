@@ -4,232 +4,225 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ValerisEdu | Study Abroad Consultancy</title>
-  <meta
-    name="description"
-    content="ValerisEdu offers expert guidance for study abroad admissions, university applications, documentation, visa support, and personalized consultation."
-  />
-
+  <meta name="description" content="ValerisEdu offers expert guidance for study abroad admissions, university applications, documentation, visa support, and personalized consultation." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-  <header>
-    <div class="navbar">
-      <a href="index.html" class="logo">
+  <header class="site-header">
+    <div class="navbar container">
+      <a href="index.html" class="logo" aria-label="ValerisEdu home">
         <img src="images/logo-icon.png" alt="ValerisEdu Logo Icon">
         <img src="images/logo-text.png" alt="ValerisEdu" class="logo-text">
       </a>
 
-      <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
-        <a href="consultation.html">Book Consultation</a>
+        <a href="consultation.html" class="nav-cta">Book Consultation</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-left">
-        <h1>
-          Guiding You Towards
-          <span>Global Education</span>
-          Opportunities
-        </h1>
-        <p>
-          At ValerisEdu, we help students take confident steps towards studying
-          abroad with the right guidance, strategic planning, and end-to-end
-          support through every stage of the journey.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="consultation.html" class="btn-primary">Book Consultation</a>
-          <a href="#services" class="btn-secondary">Explore Services</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <img src="images/logo-cover.png" alt="ValerisEdu Cover Visual">
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <h2>Why Students Choose ValerisEdu</h2>
-
-      <div class="features">
-        <div class="card">
-          <h3>Personalized Guidance</h3>
+      <div class="container hero-grid reveal">
+        <div class="hero-left">
+          <span class="eyebrow">International Education Guidance</span>
+          <h1>Guiding You Towards <span>Global Education</span> Opportunities</h1>
           <p>
-            Every student profile is different. We help you choose the right
-            country, course, and university based on your academic goals,
-            budget, and long-term plans.
+            At ValerisEdu, we help students move towards studying abroad with the right
+            planning, expert guidance, and end-to-end support through every stage of the journey.
           </p>
+          <div class="hero-buttons">
+            <a href="consultation.html" class="btn-primary">Book Consultation</a>
+            <a href="#services" class="btn-secondary">Explore Services</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>Personalized</strong>
+              <span>Student-first guidance</span>
+            </div>
+            <div>
+              <strong>Structured</strong>
+              <span>Application planning</span>
+            </div>
+            <div>
+              <strong>Reliable</strong>
+              <span>Visa and admission support</span>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Structured Application Support</h3>
-          <p>
-            From shortlisting universities to refining documentation, SOPs, and
-            applications, we provide clear support at each stage of the process.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Reliable End-to-End Assistance</h3>
-          <p>
-            We stay with you beyond admissions, offering support for visa
-            procedures, essential preparation, and a smoother path to your next
-            academic chapter.
-          </p>
+        <div class="hero-right">
+          <div class="hero-visual-card">
+            <img src="images/logo-cover.png" alt="ValerisEdu Cover Visual">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="about" id="services">
-      <h2>Our Services</h2>
-
-      <div class="features">
-        <div class="card">
-          <h3>University & Course Shortlisting</h3>
+    <section class="section section-light" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-tag">About ValerisEdu</span>
+          <h2>Why Students Choose ValerisEdu</h2>
           <p>
-            A curated selection of universities and programs aligned with your
-            interests, qualifications, and future career direction.
+            We focus on clear advice, strong planning, and meaningful guidance tailored to each student profile.
           </p>
         </div>
 
-        <div class="card">
-          <h3>Application & Documentation Support</h3>
-          <p>
-            Complete guidance for application forms, statement of purpose,
-            resume preparation, recommendation handling, and supporting
-            documents.
-          </p>
-        </div>
+        <div class="features-grid">
+          <article class="card reveal">
+            <div class="card-icon">01</div>
+            <h3>Personalized Guidance</h3>
+            <p>
+              Every student profile is different. We help you identify the right country, course,
+              and university based on your goals, budget, and long-term direction.
+            </p>
+          </article>
 
-        <div class="card">
-          <h3>Visa Guidance</h3>
-          <p>
-            Step-by-step help with visa documentation, application planning,
-            interview preparation, and essential submission readiness.
-          </p>
-        </div>
+          <article class="card reveal">
+            <div class="card-icon">02</div>
+            <h3>Structured Support</h3>
+            <p>
+              From shortlisting to documentation, SOP guidance, and applications, we support each
+              phase with clarity and proper planning.
+            </p>
+          </article>
 
-        <div class="card">
-          <h3>Profile Evaluation</h3>
-          <p>
-            A clear assessment of your academic background, strengths,
-            opportunities, and the best possible route for your study abroad
-            plans.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Admission Strategy</h3>
-          <p>
-            A smart and practical roadmap for applications, deadlines, intake
-            planning, and university selection to improve your chances.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Pre-Departure Support</h3>
-          <p>
-            Guidance to help you prepare confidently for the next step before
-            you begin your international student journey.
-          </p>
+          <article class="card reveal">
+            <div class="card-icon">03</div>
+            <h3>End-to-End Assistance</h3>
+            <p>
+              Beyond admissions, we also support students with visa preparation and readiness for
+              the next chapter of their academic journey.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="about" id="process">
-      <h2>How We Work</h2>
-
-      <div class="features">
-        <div class="card">
-          <h3>01. Consultation</h3>
-          <p>
-            We begin by understanding your profile, academic background,
-            ambitions, and country preferences in detail.
-          </p>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-tag">Our Services</span>
+          <h2>Comprehensive Support for Your Study Abroad Journey</h2>
         </div>
 
-        <div class="card">
-          <h3>02. Planning</h3>
-          <p>
-            Based on your profile, we suggest suitable study destinations,
-            universities, programs, and an application strategy.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>03. Application Support</h3>
-          <p>
-            We assist you with documentation, submissions, profile presentation,
-            and keeping your application process organized.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>04. Admission Guidance</h3>
-          <p>
-            Once offers begin to come in, we help you evaluate options and move
-            forward with confidence.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>05. Visa Preparation</h3>
-          <p>
-            We support you through the visa stage with a clear checklist,
-            documentation guidance, and practical preparation.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>06. Next Step Readiness</h3>
-          <p>
-            We help ensure you feel prepared, informed, and clear as you move
-            towards your international education journey.
-          </p>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <h3>University & Course Shortlisting</h3>
+            <p>A curated selection of universities and programs aligned with your qualifications and future plans.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Application & Documentation Support</h3>
+            <p>Guidance for applications, SOPs, resumes, recommendation letters, and supporting documentation.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Visa Guidance</h3>
+            <p>Step-by-step support for visa documentation, interview readiness, and submission preparation.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Profile Evaluation</h3>
+            <p>A clear assessment of your profile, strengths, and the most suitable route for your plans.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Admission Strategy</h3>
+            <p>A thoughtful roadmap for timelines, application batches, intake planning, and decision-making.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Pre-Departure Support</h3>
+            <p>Practical guidance to help you move forward with confidence before your international transition.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <h2>Take the First Step with Confidence</h2>
-      <p>
-        Whether you are exploring options or ready to apply, ValerisEdu is here
-        to guide you with clarity, strategy, and dedicated support.
-      </p>
-      <a href="consultation.html" class="btn-primary">Book Your Consultation</a>
+    <section class="section section-light" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-tag">How We Work</span>
+          <h2>A Clear and Guided Process</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span>01</span>
+            <div>
+              <h3>Consultation</h3>
+              <p>We begin by understanding your background, goals, and country preferences in detail.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>02</span>
+            <div>
+              <h3>Planning</h3>
+              <p>We suggest suitable destinations, universities, and a realistic application strategy.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>03</span>
+            <div>
+              <h3>Application Support</h3>
+              <p>We assist with documentation, profile presentation, and organized submissions.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>04</span>
+            <div>
+              <h3>Admission & Visa Guidance</h3>
+              <p>We help evaluate offers, prepare for visa steps, and move forward confidently.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-card reveal">
+        <div>
+          <span class="section-tag section-tag-light">Take the First Step</span>
+          <h2>Begin Your Journey with Clarity and Confidence</h2>
+          <p>
+            Whether you are just exploring your options or ready to apply, ValerisEdu is here to support you.
+          </p>
+        </div>
+        <a href="consultation.html" class="btn-primary">Book Your Consultation</a>
+      </div>
     </section>
 
     <section class="consult-form-section" id="contact">
-      <div class="form-container">
-        <div class="form-info">
+      <div class="container form-container">
+        <div class="form-info reveal">
+          <span class="section-tag">Contact</span>
           <h2>Get in Touch</h2>
           <p>
-            Have a question about admissions, courses, countries, or your next
-            step? Send us an enquiry and our team will get back to you with the
-            right guidance.
+            Have a question about admissions, courses, countries, or your next step? Send us an enquiry and our team will get back to you with the right guidance.
           </p>
-
           <ul>
             <li>Quick responses for student enquiries</li>
             <li>Clear guidance for your next steps</li>
             <li>Support for courses, applications and visas</li>
             <li>Professional and student-focused assistance</li>
           </ul>
+          <div class="location-note">
+            <p><strong>Location:</strong> Muthuram Complex, Erode</p>
+          </div>
         </div>
 
-        <div class="form-box">
+        <div class="form-box reveal">
           <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <input type="hidden" name="access_key" value="e8e7b6db-d0d9-41e2-a745-ae81e5866afa">
             <input type="hidden" name="subject" value="New Website Enquiry - ValerisEdu">
@@ -242,16 +235,19 @@
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="tel" name="Phone Number" placeholder="Your Phone Number" required>
             <textarea name="Enquiry Message" placeholder="Tell us how we can help you" rows="5" required></textarea>
-
             <button type="submit">Send Enquiry</button>
           </form>
+
+          <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.49585372380946!2d77.7230413619621!3d11.339556305157448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f40a51620d1%3A0x96b8200d93539586!2sMuthuram%20complex!5e0!3m2!1sen!2sin!4v1775589860176!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Google map showing Muthuram Complex, Erode"></iframe>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-container">
+    <div class="footer-container container">
       <div class="footer-logo">
         <img src="images/logo-icon.png" alt="ValerisEdu Logo">
         <p>Guiding students towards global education opportunities.</p>
@@ -267,5 +263,6 @@
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
