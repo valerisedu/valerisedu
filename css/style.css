@@ -1144,3 +1144,65 @@ footer{
     border-radius:20px;
   }
 }
+.country-grid{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:18px;
+  margin-top:24px;
+}
+
+.country-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:86px;
+  padding:18px 16px;
+  background:linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+  border:1px solid rgba(31, 53, 86, 0.12);
+  box-shadow:0 14px 34px rgba(15, 31, 54, 0.07);
+  transition:all 0.28s ease;
+  text-align:center;
+}
+
+.country-box:hover{
+  transform:translateY(-4px);
+  border-color:rgba(213, 160, 55, 0.4);
+  box-shadow:0 18px 40px rgba(15, 31, 54, 0.10);
+}
+
+.country-vector{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+}
+
+.country-vector svg{
+  width:22px;
+  height:22px;
+  stroke:var(--accent);
+  fill:none;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.country-name{
+  font-size:0.98rem;
+  font-weight:600;
+  color:var(--primary);
+}
+
+@media (max-width: 900px){
+  .country-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .country-grid{
+    grid-template-columns:1fr;
+  }
+}
