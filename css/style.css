@@ -1125,3 +1125,28 @@ footer{
     height:88px;
   }
 }
+.hero-right{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-visual-frame{
+  width:100%;
+  max-width:480px;
+  padding:18px;
+  border:1px solid rgba(31,53,86,0.12);
+  background:#fff;
+  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+}
+
+.floating-hero-logo{
+  width:100%;
+  animation:floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-12px); }
+  100%{ transform:translateY(0px); }
+}
