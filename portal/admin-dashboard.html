@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ValerisEdu Admin Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/portal.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="images/logo-icon.png" alt="">
+            <span>ValerisEdu</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a class="active" href="#">
+                Dashboard
+            </a>
+
+            <a href="#">
+                All Students
+            </a>
+
+            <a href="#">
+                Add Student
+            </a>
+
+            <a href="#">
+                Applications
+            </a>
+
+            <a href="#">
+                Documents
+            </a>
+
+            <a href="#">
+                Communication
+            </a>
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-header">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back to ValerisEdu CRM</p>
+            </div>
+
+            <button class="new-student-btn">
+                + Add Student
+            </button>
+
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <span>Total Students</span>
+                <h2>248</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Applications</span>
+                <h2>693</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Offers</span>
+                <h2>121</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Enrolled</span>
+                <h2>87</h2>
+            </div>
+
+        </div>
+
+        <div class="dashboard-grid">
+
+            <section class="dashboard-card large-card">
+
+                <div class="card-header">
+                    <h3>Recent Activity</h3>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <strong>VE24001</strong>
+                        <span>Uploaded Passport</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <strong>VE24012</strong>
+                        <span>Application Submitted</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <strong>VE24025</strong>
+                        <span>Offer Received</span>
+                    </div>
+
+                    <div class="activity-item">
+                        <strong>VE24041</strong>
+                        <span>Document Approved</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Pending Documents</h3>
+                </div>
+
+                <ul class="simple-list">
+                    <li>Passport Review</li>
+                    <li>SOP Review</li>
+                    <li>LOR Review</li>
+                    <li>UG Marksheet Review</li>
+                </ul>
+
+            </section>
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+                    <h3>Follow Ups</h3>
+                </div>
+
+                <ul class="simple-list">
+                    <li>VE24008</li>
+                    <li>VE24019</li>
+                    <li>VE24027</li>
+                    <li>VE24034</li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/admin-dashboard.js"></script>
+
+</body>
+</html>
