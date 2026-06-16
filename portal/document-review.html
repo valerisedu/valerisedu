@@ -1,1 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Document Review | ValerisEdu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/portal.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<style>
+.review-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:22px;
+}
+
+.review-toolbar{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:14px;
+    margin-bottom:22px;
+}
+
+.review-toolbar input,
+.review-toolbar select{
+    height:52px;
+    border:1px solid #e5eaf2;
+    border-radius:14px;
+    padding:0 15px;
+    background:white;
+}
+
+.review-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.review-item{
+    background:white;
+    border-radius:22px;
+    padding:22px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+}
+
+.review-item h3{
+    color:#103361;
+    margin-bottom:6px;
+}
+
+.review-meta{
+    color:#667085;
+    font-size:.92rem;
+}
+
+.review-actions{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.approve-btn{
+    background:#0f9d58;
+}
+
+.reject-btn{
+    background:#c62828;
+}
+
+.reupload-btn{
+    background:#f57c00;
+}
+
+.review-side{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.reason-box{
+    background:#fff7ea;
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:22px;
+    padding:22px;
+}
+
+.reason-box h3{
+    color:#103361;
+    margin-bottom:14px;
+}
+
+.reason-box ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#667085;
+}
+
+@media(max-width:1100px){
+    .review-grid,
+    .review-toolbar{
+        grid-template-columns:1fr;
+    }
+
+    .review-item{
+        grid-template-columns:1fr;
+    }
+
+    .review-actions{
+        flex-wrap:wrap;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="images/logo-icon.png">
+            <span>ValerisEdu</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="all-students.html">All Students</a>
+            <a href="add-student.html">Add Student</a>
+            <a href="#">Applications</a>
+            <a class="active" href="document-review.html">Documents</a>
+            <a href="communication.html">Communication</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <div class="students-header">
+
+            <div>
+                <h1>Document Review</h1>
+                <p>Review, approve, reject, or request re-upload of student documents</p>
+            </div>
+
+        </div>
+
+        <div class="review-toolbar">
+
+            <input type="text" placeholder="Search student, ID, or document">
+
+            <select>
+                <option>All Documents</option>
+                <option>Passport</option>
+                <option>Academic</option>
+                <option>SOP</option>
+                <option>LOR</option>
+                <option>Resume</option>
+            </select>
+
+            <select>
+                <option>All Status</option>
+                <option>Uploaded</option>
+                <option>Approved</option>
+                <option>Rejected</option>
+                <option>Re-upload Requested</option>
+            </select>
+
+            <select>
+                <option>All Partners</option>
+                <option>Direct Application</option>
+                <option>Leverage</option>
+                <option>ApplyBoard</option>
+                <option>Adventus</option>
+                <option>FSW Flow</option>
+            </select>
+
+        </div>
+
+        <div class="review-grid">
+
+            <section class="review-list">
+
+                <div class="review-item">
+
+                    <div>
+                        <h3>Passport Uploaded</h3>
+                        <p class="review-meta">
+                            VE24001 • Ajith Kumar • Direct Application • Uploaded today
+                        </p>
+                    </div>
+
+                    <div class="review-actions">
+                        <button class="table-btn approve-btn">Approve</button>
+                        <button class="table-btn reject-btn">Reject</button>
+                        <button class="table-btn reupload-btn">Request Re-upload</button>
+                    </div>
+
+                </div>
+
+                <div class="review-item">
+
+                    <div>
+                        <h3>UG Semesterwise Marksheet</h3>
+                        <p class="review-meta">
+                            VE24002 • John Mathew • ApplyBoard • Uploaded yesterday
+                        </p>
+                    </div>
+
+                    <div class="review-actions">
+                        <button class="table-btn approve-btn">Approve</button>
+                        <button class="table-btn reject-btn">Reject</button>
+                        <button class="table-btn reupload-btn">Request Re-upload</button>
+                    </div>
+
+                </div>
+
+                <div class="review-item">
+
+                    <div>
+                        <h3>SOP Document</h3>
+                        <p class="review-meta">
+                            VE24008 • Priya Sharma • Leverage • Uploaded 2 days ago
+                        </p>
+                    </div>
+
+                    <div class="review-actions">
+                        <button class="table-btn approve-btn">Approve</button>
+                        <button class="table-btn reject-btn">Reject</button>
+                        <button class="table-btn reupload-btn">Request Re-upload</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <aside class="review-side">
+
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+                        <h3>Review Summary</h3>
+                    </div>
+
+                    <ul class="simple-list">
+                        <li>Pending Review: 18</li>
+                        <li>Approved Today: 7</li>
+                        <li>Rejected: 3</li>
+                        <li>Re-upload Requested: 5</li>
+                    </ul>
+
+                </div>
+
+                <div class="reason-box">
+
+                    <h3>Rejection Reasons</h3>
+
+                    <ul>
+                        <li>Blurry Document</li>
+                        <li>Incomplete Document</li>
+                        <li>Wrong Document Uploaded</li>
+                        <li>Expired Document</li>
+                        <li>Incorrect Information</li>
+                        <li>Other Custom Reason</li>
+                    </ul>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/document-review.js"></script>
+
+</body>
+</html>
