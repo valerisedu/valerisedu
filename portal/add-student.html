@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Add Student | ValerisEdu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/portal.css">
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="images/logo-icon.png">
+            <span>ValerisEdu</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="all-students.html">All Students</a>
+            <a class="active" href="add-student.html">Add Student</a>
+            <a href="#">Applications</a>
+            <a href="#">Documents</a>
+            <a href="#">Communication</a>
+            <a href="#">Settings</a>
+
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <div class="students-header">
+
+            <div>
+                <h1>Add Student</h1>
+                <p>Create a new ValerisEdu student account</p>
+            </div>
+
+        </div>
+
+        <div class="wizard-card">
+
+            <div class="wizard-progress">
+
+                <div class="wizard-step active">1. Basic Details</div>
+                <div class="wizard-step">2. Academic</div>
+                <div class="wizard-step">3. Preferences</div>
+                <div class="wizard-step">4. Portal Creation</div>
+
+            </div>
+
+            <form id="studentForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>DOB</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Curriculum</label>
+
+                        <select>
+                            <option>CBSE</option>
+                            <option>ICSE</option>
+                            <option>MATRICULATION</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="wizard-actions">
+
+                    <button
+                        type="button"
+                        class="table-btn">
+                        Save Draft
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="new-student-btn">
+                        Continue
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/add-student.js"></script>
+
+</body>
+</html>
