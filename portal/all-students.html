@@ -1,1 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>All Students | ValerisEdu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/portal.css">
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="images/logo-icon.png">
+            <span>ValerisEdu</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="admin-dashboard.html">Dashboard</a>
+
+            <a class="active" href="all-students.html">
+                All Students
+            </a>
+
+            <a href="#">
+                Add Student
+            </a>
+
+            <a href="#">
+                Applications
+            </a>
+
+            <a href="#">
+                Documents
+            </a>
+
+            <a href="#">
+                Communication
+            </a>
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <div class="students-header">
+
+            <div>
+                <h1>All Students</h1>
+                <p>Manage and track every student</p>
+            </div>
+
+            <button class="new-student-btn">
+                + Add Student
+            </button>
+
+        </div>
+
+        <div class="crm-toolbar">
+
+            <input
+                type="text"
+                placeholder="Search Student ID, Name, Email or Phone">
+
+            <select>
+                <option>All Countries</option>
+            </select>
+
+            <select>
+                <option>All Intakes</option>
+            </select>
+
+            <select>
+                <option>All Status</option>
+            </select>
+
+            <select>
+                <option>All Partners</option>
+            </select>
+
+        </div>
+
+        <div class="saved-views">
+
+            <button class="view-chip active">
+                All Students
+            </button>
+
+            <button class="view-chip">
+                Needs Attention
+            </button>
+
+            <button class="view-chip">
+                Pending Documents
+            </button>
+
+            <button class="view-chip">
+                Offer Received
+            </button>
+
+            <button class="view-chip">
+                Enrolled
+            </button>
+
+        </div>
+
+        <div class="students-table-card">
+
+            <table class="students-table">
+
+                <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Partner</th>
+                    <th>Status</th>
+                    <th>Documents</th>
+                    <th>Applications</th>
+                    <th>Action</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>VE24001</td>
+
+                    <td>
+                        Ajith Kumar
+                    </td>
+
+                    <td>
+                        Direct Application
+                    </td>
+
+                    <td>
+                        <span class="status-green">
+                            Processing
+                        </span>
+                    </td>
+
+                    <td>82%</td>
+
+                    <td>4 / 5</td>
+
+                    <td>
+                        <button class="table-btn">
+                            Open
+                        </button>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>VE24002</td>
+
+                    <td>
+                        John Mathew
+                    </td>
+
+                    <td>
+                        ApplyBoard
+                    </td>
+
+                    <td>
+                        <span class="status-orange">
+                            Pending Docs
+                        </span>
+                    </td>
+
+                    <td>61%</td>
+
+                    <td>2 / 5</td>
+
+                    <td>
+                        <button class="table-btn">
+                            Open
+                        </button>
+                    </td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/all-students.js"></script>
+
+</body>
+</html>
