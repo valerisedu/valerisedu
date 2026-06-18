@@ -1,21 +1,166 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { auth, db } from "./firebase-config.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCBjETh_8Wy2aqXJxW95xt-Waib2JqxTSU",
-  authDomain: "valeris-edu-portal.firebaseapp.com",
-  projectId: "valeris-edu-portal",
-  storageBucket: "valeris-edu-portal.firebasestorage.app",
-  messagingSenderId: "1085558997207",
-  appId: "1:1085558997207:web:22eae8cc6a91fece60f092",
-  measurementId: "G-7EJCQ925HW"
-};
+import {
+  createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+import {
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+const APPS_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzLb0IPoZDBhY_-nlwwztoSK4dWvPKnmvMBILROsEnN7_bJ414DGh7aus18dO6-DKkd/exec";
+
+const form = document.getElementById("studentForm");
+
+form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  try {
+
+    const firstName =
+      document.getElementById("firstName").value.trim();
+
+    const lastName =
+      document.getElementById("lastName").value.trim();
+
+    const dob =
+      document.getElementById("dob").value;
+
+    const mobile =
+      document.getElementById("mobile").value.trim();
+
+    const portalEmail =
+      document.getElementById("portalEmail").value.trim();
+
+    const portalPassword =
+      document.getElementById("portalPassword").value.trim();
+
+    const partner =
+      document.getElementById("partner").value;
+
+    const country =
+      document.getElementById("country").value;
+
+    const intake =
+      document.getElementById("intake").value;
+
+    const settingsRef =
+      doc(db, "settings", "system");
+
+    const settingsSnap =
+      await getDoc(settingsRef);
+
+    if (!settingsSnap.exists()) {
+      throw new Error("System settings not found");
+    }
+
+    const settingsData =
+      settingsSnap.data();
+
+    const studentNumber =
+      settingsData.nextStudentNumber;
+
+    const prefix =
+      settingsData.studentIdPrefix || "VE";
+
+    const studentId =
+      `${prefix}${studentNumber}`;
+
+    await createUserWithEmailAndPassword(
+      auth,
+      portalEmail,
+      portalPassword
+    );
+
+    let folderUrl = "";
+
+    const folderResponse =
+      await fetch(APPS_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/json"
+        },
+        body: JSON.stringify({
+          action: "createStudentFolders",
+          studentId,
+          firstName,
+          lastName
+        })
+      });
+
+    const folderResult =
+      await folderResponse.json();
+
+    if (folderResult.success) {
+      folderUrl =
+        folderResult.studentFolderUrl;
+    }
+
+    await setDoc(
+      doc(db, "students", studentId),
+      {
+        studentId,
+
+        firstName,
+        lastName,
+
+        dob,
+        mobile,
+
+        portalEmail,
+        portalPassword,
+
+        partner,
+        country,
+        intake,
+
+        status: "New",
+
+        folderUrl,
+
+        role: "student",
+
+        accountStatus: "active",
+
+        profileCompletion: 0,
+
+        createdAt:
+          serverTimestamp(),
+
+        lastActivity:
+          serverTimestamp()
+      }
+    );
+
+    await updateDoc(
+      settingsRef,
+      {
+        nextStudentNumber:
+          studentNumber + 1
+      }
+    );
+
+    alert(
+      `Student Created Successfully\n\n${studentId}`
+    );
+
+    form.reset();
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert(
+      error.message ||
+      "Student creation failed"
+    );
+  }
+
+});
