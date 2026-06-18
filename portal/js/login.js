@@ -1,18 +1,19 @@
 import { auth } from "./firebase-config.js";
+
 import {
   signInWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 
 const loginForm = document.getElementById("loginForm");
 const loginBtn = document.getElementById("loginBtn");
 const errorBox = document.getElementById("loginError");
 
-function showError(message){
+function showError(message) {
   errorBox.classList.add("show");
   errorBox.textContent = message;
 }
 
-function hideError(){
+function hideError() {
   errorBox.classList.remove("show");
   errorBox.textContent = "";
 }
@@ -23,18 +24,17 @@ loginForm.addEventListener("submit", async (e) => {
 
   hideError();
 
-  const studentId = document
+  const username = document
     .getElementById("studentId")
     .value
-    .trim()
-    .toUpperCase();
+    .trim();
 
   const password = document
     .getElementById("password")
     .value;
 
-  if(!studentId || !password){
-    showError("Please enter Student ID and Password");
+  if (!username || !password) {
+    showError("Please enter Username/Email and Password");
     return;
   }
 
@@ -43,12 +43,10 @@ loginForm.addEventListener("submit", async (e) => {
 
   try {
 
-    let email;
+    let email = username;
 
-    if(studentId.includes("@")){
-      email = studentId;
-    } else {
-      email = `${studentId}@students.valerisedu.com`;
+    if (!username.includes("@")) {
+      email = `${username.toLowerCase()}@students.valerisedu.com`;
     }
 
     await signInWithEmailAndPassword(
@@ -57,18 +55,27 @@ loginForm.addEventListener("submit", async (e) => {
       password
     );
 
-    if(email === "admin@valerisedu.com"){
-      window.location.href = "admin-dashboard.html";
+    if (
+      email.toLowerCase() ===
+      "connect@valerisedu.com"
+    ) {
+
+      window.location.href =
+        "admin-dashboard.html";
+
     } else {
-      window.location.href = "dashboard.html";
+
+      window.location.href =
+        "dashboard.html";
+
     }
 
-  } catch(error){
+  } catch (error) {
 
     console.error(error);
 
     showError(
-      "Invalid Student ID or Password"
+      "Invalid Username/Email or Password"
     );
 
   }
