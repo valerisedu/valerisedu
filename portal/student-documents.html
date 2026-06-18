@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Documents | ValerisEdu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/portal.css">
+<link rel="stylesheet" href="css/student.css">
+
+</head>
+
+<body>
+
+<div class="student-layout">
+
+    <aside class="student-sidebar">
+
+        <div class="student-logo">
+            <img src="images/logo-icon.png">
+            <span>ValerisEdu</span>
+        </div>
+
+        <nav class="student-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="student-applications.html">My Applications</a>
+            <a class="active" href="student-documents.html">Documents</a>
+            <a href="student-profile-student.html">My Profile</a>
+        </nav>
+
+    </aside>
+
+    <main class="student-main">
+
+        <div class="student-header">
+            <h1>Documents</h1>
+            <p>Upload and track document approvals</p>
+        </div>
+
+        <div class="student-grid">
+
+            <div class="student-card">
+
+                <h3>Passport</h3>
+
+                <div class="status-green">
+                    Approved
+                </div>
+
+                <br><br>
+
+                <button class="table-btn">
+                    View Document
+                </button>
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>SOP</h3>
+
+                <div class="status-orange">
+                    Pending Review
+                </div>
+
+                <br><br>
+
+                <button class="table-btn">
+                    Replace Document
+                </button>
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>LOR</h3>
+
+                <div>
+                    Not Uploaded
+                </div>
+
+                <br><br>
+
+                <button class="table-btn">
+                    Upload Document
+                </button>
+
+            </div>
+
+            <div class="student-card">
+
+                <h3>Resume</h3>
+
+                <div class="status-green">
+                    Approved
+                </div>
+
+                <br><br>
+
+                <button class="table-btn">
+                    View Document
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/student-documents.js"></script>
+
+</body>
+</html>
