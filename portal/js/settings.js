@@ -1,1 +1,1 @@
-
+console.log("Settings Loaded");
