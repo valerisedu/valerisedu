@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Settings | ValerisEdu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/portal.css">
+<link rel="stylesheet" href="css/admin.css">
+
+<style>
+.settings-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.settings-card{
+    background:white;
+    border-radius:24px;
+    padding:26px;
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+    min-height:210px;
+}
+
+.settings-card h3{
+    color:#103361;
+    margin-bottom:10px;
+}
+
+.settings-card p{
+    color:#667085;
+    font-size:.92rem;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+.settings-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.settings-pill{
+    padding:9px 13px;
+    border-radius:999px;
+    background:#f7f9fc;
+    color:#103361;
+    font-size:.84rem;
+    font-weight:500;
+}
+
+.partner-mini{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px;
+    background:#f7f9fc;
+    border-radius:14px;
+    margin-bottom:10px;
+}
+
+.partner-mini span{
+    color:#103361;
+    font-weight:600;
+}
+
+.settings-action{
+    margin-top:18px;
+}
+
+@media(max-width:1200px){
+    .settings-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:760px){
+    .settings-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="images/logo-icon.png">
+            <span>ValerisEdu</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="all-students.html">All Students</a>
+            <a href="add-student.html">Add Student</a>
+            <a href="#">Applications</a>
+            <a href="document-review.html">Documents</a>
+            <a href="communication.html">Communication</a>
+            <a class="active" href="settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <div class="students-header">
+            <div>
+                <h1>Settings</h1>
+                <p>Manage system preferences, partners, templates and lists</p>
+            </div>
+        </div>
+
+        <div class="settings-grid">
+
+            <section class="settings-card">
+                <h3>Partner Management</h3>
+                <p>Add, remove or update partners and upload partner icons used across the CRM.</p>
+
+                <div class="partner-mini"><span>Direct Application</span><small>Active</small></div>
+                <div class="partner-mini"><span>Leverage</span><small>Active</small></div>
+                <div class="partner-mini"><span>ApplyBoard</span><small>Active</small></div>
+                <div class="partner-mini"><span>Adventus</span><small>Active</small></div>
+                <div class="partner-mini"><span>FSW Flow</span><small>Active</small></div>
+
+                <button class="table-btn settings-action">Manage Partners</button>
+            </section>
+
+            <section class="settings-card">
+                <h3>Country List</h3>
+                <p>Edit the countries that appear in student profile and enquiry forms.</p>
+
+                <div class="settings-list">
+                    <span class="settings-pill">UK</span>
+                    <span class="settings-pill">Germany</span>
+                    <span class="settings-pill">Ireland</span>
+                    <span class="settings-pill">Canada</span>
+                    <span class="settings-pill">Singapore</span>
+                    <span class="settings-pill">Georgia</span>
+                    <span class="settings-pill">Spain</span>
+                    <span class="settings-pill">Others</span>
+                </div>
+
+                <button class="table-btn settings-action">Edit Countries</button>
+            </section>
+
+            <section class="settings-card">
+                <h3>Status Lists</h3>
+                <p>Manage university application statuses used across student applications.</p>
+
+                <div class="settings-list">
+                    <span class="settings-pill">New</span>
+                    <span class="settings-pill">Documentation</span>
+                    <span class="settings-pill">Processing</span>
+                    <span class="settings-pill">Submitted</span>
+                    <span class="settings-pill">Conditions</span>
+                    <span class="settings-pill">Offered</span>
+                    <span class="settings-pill">Enrolled</span>
+                </div>
+
+                <button class="table-btn settings-action">Edit Statuses</button>
+            </section>
+
+            <section class="settings-card">
+                <h3>Intake Options</h3>
+                <p>Control intake seasons and years shown while creating student profiles.</p>
+
+                <div class="settings-list">
+                    <span class="settings-pill">Summer 2026</span>
+                    <span class="settings-pill">Winter 2026</span>
+                    <span class="settings-pill">Summer 2027</span>
+                    <span class="settings-pill">Winter 2027</span>
+                </div>
+
+                <button class="table-btn settings-action">Edit Intakes</button>
+            </section>
+
+            <section class="settings-card">
+                <h3>Email Templates</h3>
+                <p>Manage automated emails for student registration and application status updates.</p>
+
+                <div class="settings-list">
+                    <span class="settings-pill">Welcome Email</span>
+                    <span class="settings-pill">Status Updated</span>
+                    <span class="settings-pill">Offer Received</span>
+                </div>
+
+                <button class="table-btn settings-action">Edit Templates</button>
+            </section>
+
+            <section class="settings-card">
+                <h3>Audit Logs</h3>
+                <p>View account creation, status updates, document actions and deleted records.</p>
+
+                <div class="settings-list">
+                    <span class="settings-pill">Student Created</span>
+                    <span class="settings-pill">Document Approved</span>
+                    <span class="settings-pill">Status Changed</span>
+                    <span class="settings-pill">Deleted Records</span>
+                </div>
+
+                <button class="table-btn settings-action">View Logs</button>
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script type="module" src="js/settings.js"></script>
+
+</body>
+</html>
